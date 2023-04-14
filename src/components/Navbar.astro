@@ -1,8 +1,9 @@
 <header>
   <nav>
-    <div>KL</div>
+    <div id="title">Kadeem Lewis</div>
     <ul>
       <li><a href="#about-me">About</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="" class="resume-button">Resume</a></li>
@@ -10,8 +11,18 @@
   </nav>
 </header>
 <style lang="scss">
+  nav {
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  #title {
+    font-weight: bold;
+    font-size: 2rem;
+  }
   ul {
     display: flex;
+    width: 25%;
     justify-content: space-around;
   }
   li {
