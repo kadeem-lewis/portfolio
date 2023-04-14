@@ -1,0 +1,39 @@
+---
+import ProjectCard from "./ProjectCard.astro";
+
+const projects = [
+  {
+    title: "Pokedexle",
+    description:
+      "A wordle inspired web app where users can select a variety of different pokemon based game. Users can choose to either guess a pokemon based on it’s stats, guess a move based on it’s stats or guess a pokemon based on it’s outline.",
+    tech: ["NextJs", "Typescript", "Tailwind", "Jotai"],
+    path: "",
+    links: [
+      "https://github.com/kadeem-lewis/pokedexle",
+      "https://pokedexle.com",
+    ],
+  },
+  {
+    title: "Taskbored",
+    description:
+      "A personal planner web app that helps users to organize their life. Users are able to create tasks and events and organize those tasks in a calendar view, a task view and a kanban board.",
+    tech: ["Typescript", "React", "Tailwind", "Firebase"],
+    path: "",
+    links: ["https://github.com/kadeem-lewis/planner-app", ""],
+  },
+];
+---
+
+<div>
+  {
+    projects.map((project) => (
+      <ProjectCard
+        title={project.title}
+        description={project.description}
+        tech={project.tech}
+        path={project.path}
+        links={project.links}
+      />
+    ))
+  }
+</div>
