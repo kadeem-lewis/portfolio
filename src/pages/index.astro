@@ -16,6 +16,20 @@ import Layout from "../layouts/Layout.astro";
     </section>
     <section id="about-me">
       <h3>About me</h3>
+      <p>
+        Hello! My name is Kadeem and I really enjoy making websites. The first
+        website I ever tried to make was in 2019 for a videogame I played. I
+        didn't know anything about code so I tried learning Wordpress to build
+        the site. I wasn't able to finish building the site but through the
+        process, I realized that this was something I enjoyed.
+      </p>
+      <p>
+        Since then I have learned much more than Wordpress and my passionate for
+        this field is just as high as it was the day I centered my first div. I
+        have used these skills that I have acquired to contribute to my personal
+        projects, excel in my classes and even contribute to a startup. I hope
+        to be able to use and continue to improve my skills in future endeavors!
+      </p>
       <Technologies />
     </section>
     <section id="experience">
@@ -32,10 +46,16 @@ import Layout from "../layouts/Layout.astro";
   </main>
 </Layout>
 
-<style>
+<style lang="scss">
   main {
     margin: auto;
     padding: 1.5rem;
     max-width: 920px;
+  }
+  #intro {
+    h2,
+    p {
+      margin: 0;
+    }
   }
 </style>
