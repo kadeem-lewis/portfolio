@@ -1,1 +1,39 @@
-<div></div>
+---
+const { title, description, tech, path, links } = Astro.props;
+---
+
+<div class="card">
+  <figure>
+    <!-- <Image src={path}/> -->
+  </figure>
+  <div>
+    <div class="heading">
+      <h3><a href={links[1] != "" ? links[1] : links[0]}>{title}</a></h3>
+      <div>icon</div>
+    </div>
+    <p>{description}</p>
+    <div class="tech-stack">
+      {tech.map((skill: string) => <div>{skill}</div>)}
+    </div>
+  </div>
+</div>
+<style lang="scss">
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 1rem;
+  }
+  div.heading {
+    display: flex;
+    justify-content: space-between;
+  }
+  .tech-stack {
+    display: flex;
+    div {
+      margin: 0.5rem 1rem;
+      padding: 0.5rem;
+      border-radius: 0.25rem;
+      border: 1px solid black;
+    }
+  }
+</style>
