@@ -1,6 +1,7 @@
 {
   "name": "curved-comet",
   "type": "module",
+  "private": true,
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
@@ -10,7 +11,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^2.3.0",
-    "sass": "^1.62.0"
+    "@astrojs/image": "^0.17.0",
+    "astro": "^2.6.4",
+    "astro-icon": "^0.8.1",
+    "sass": "^1.63.4"
   }
 }
