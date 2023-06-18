@@ -7,7 +7,10 @@ const projects = [
     description:
       "A wordle inspired web app where users can select a variety of different pokemon based game. Users can choose to either guess a pokemon based on it’s stats, guess a move based on it’s stats or guess a pokemon based on it’s outline.",
     tech: ["NextJs", "Typescript", "Tailwind", "Jotai"],
-    path: "",
+    image: {
+      path: "pokedexle.png",
+      alt: "screenshot of pokedexle game",
+    },
     links: [
       "https://github.com/kadeem-lewis/pokedexle",
       "https://pokedexle.com",
@@ -17,17 +20,29 @@ const projects = [
     title: "Taskbored",
     description:
       "A personal planner web app that helps users to organize their life. Users are able to create tasks and events and organize those tasks in a calendar view, a task view and a kanban board.",
-    tech: ["Typescript", "React", "Tailwind", "Firebase"],
-    path: "",
-    links: ["https://github.com/kadeem-lewis/planner-app", ""],
+    tech: ["Typescript", "NextJs", "Tailwind", "Firebase"],
+    image: {
+      path: "taskbored.png",
+      alt: "screenshot of taskbored app",
+    },
+    links: [
+      "https://github.com/kadeem-lewis/planner-app",
+      "taskbored-kadeemlewis.vercel.app/",
+    ],
   },
   {
     title: "Hangmen",
     description:
       "A multiplayer web based game where rooms of up to 4 players compete to see who can get the most correct guesses before game ends. The classic hangman game but with a twist. ",
-    tech: ["Typescript", "VueJs", "Tailwind", "Socket.io"],
-    path: "",
-    links: ["https://github.com/kadeem-lewis/planner-app", ""],
+    tech: ["Typescript", "NuxtJs", "NodeJs", "Socket.io"],
+    image: {
+      path: "hangmen.png",
+      alt: "screenshot of hangmen game",
+    },
+    links: [
+      "https://github.com/kadeem-lewis/planner-app",
+      "playhangmen.netlify.app/",
+    ],
   },
 ];
 ---
@@ -39,7 +54,7 @@ const projects = [
         title={project.title}
         description={project.description}
         tech={project.tech}
-        path={project.path}
+        image={project.image}
         links={project.links}
       />
     ))
