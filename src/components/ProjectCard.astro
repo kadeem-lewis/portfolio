@@ -1,15 +1,23 @@
 ---
-const { title, description, tech, path, links } = Astro.props;
+import { Icon } from "astro-icon";
+import { Image } from "@astrojs/image/components";
+const { title, description, tech, image, links } = Astro.props;
 ---
 
 <div class="card">
-  <figure>
-    <!-- <Image src={path}/> -->
-  </figure>
+  <Image
+    alt={image.alt}
+    src={import(`../assets/${image.path}`)}
+    width={400}
+    aspectRatio="2:1"
+  />
   <div>
     <div class="heading">
       <h3><a href={links[1] != "" ? links[1] : links[0]}>{title}</a></h3>
-      <div>icon</div>
+      <div class="icons">
+        <a href={links[0]}><Icon name="mdi:github" /></a>
+        <a href={links[1]}><Icon name="ic:baseline-open-in-new" /></a>
+      </div>
     </div>
     <p>{description}</p>
     <div class="tech-stack">
@@ -34,6 +42,13 @@ const { title, description, tech, path, links } = Astro.props;
       padding: 0.5rem;
       border-radius: 0.25rem;
       border: 1px solid black;
+    }
+  }
+  .icons {
+    display: flex;
+    gap: 0.25rem;
+    [astro-icon] {
+      height: 1.5rem;
     }
   }
 </style>
