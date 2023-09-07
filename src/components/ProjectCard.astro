@@ -1,6 +1,6 @@
 ---
 import { Icon } from "astro-icon";
-import { Image } from "@astrojs/image/components";
+import { Image } from "astro:assets";
 const { title, description, tech, image, links } = Astro.props;
 ---
 
@@ -9,7 +9,6 @@ const { title, description, tech, image, links } = Astro.props;
     alt={image.alt}
     src={import(`../assets/${image.path}.png`)}
     width={400}
-    aspectRatio="2:1"
   />
   <div>
     <div class="heading">
