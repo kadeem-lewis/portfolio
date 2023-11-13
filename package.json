@@ -11,8 +11,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^3.0.10",
+    "@fontsource-variable/inter": "^5.0.15",
+    "astro": "^3.5.3",
     "astro-icon": "^0.8.1",
-    "sass": "^1.66.1"
+    "sass": "^1.69.5"
   }
 }
