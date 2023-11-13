@@ -3,7 +3,7 @@ import { Icon } from "astro-icon";
 const { title, description, tech, links } = Astro.props;
 ---
 
-  <div>
+  <div class="card">
     <div class="heading">
       <h3><a href={links[1] != "" ? links[1] : links[0]}>{title}</a></h3>
       <div class="icons">
@@ -19,9 +19,11 @@ const { title, description, tech, links } = Astro.props;
 </div>
 <style lang="scss">
   .card {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0 0 0.5rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;
+    margin: 1rem 0;
   }
   div.heading {
     display: flex;
