@@ -5,10 +5,10 @@ const { title, description, tech, links } = Astro.props;
 
   <div class="card">
     <div class="heading">
-      <h3><a href={links[1] != "" ? links[1] : links[0]}>{title}</a></h3>
+      <h3><a href={links[1] != "" ? links[1] : links[0]} target="_blank">{title}</a></h3>
       <div class="icons">
-        <a href={links[0]}><Icon name="mdi:github" /></a>
-        <a href={links[1]}><Icon name="ic:baseline-open-in-new" /></a>
+        <a href={links[0]} target="_blank"><Icon name="mdi:github" /></a>
+        <a href={links[1]} target="_blank"><Icon name="ic:baseline-open-in-new" /></a>
       </div>
     </div>
     <p>{description}</p>
