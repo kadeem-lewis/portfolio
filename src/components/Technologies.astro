@@ -1,1 +1,28 @@
-<div>Technologies</div>
+---
+import { Icon } from "astro-icon";
+---
+<section class="skills">
+    <Icon name="mdi:language-html5"/>
+    <Icon name="ion:logo-css3"/>
+    <Icon name="mdi:tailwind"/>
+    <Icon name="mdi:language-typescript"/>
+    <Icon name="mdi:nodejs"/>
+    <Icon name="mdi:react"/>
+    <Icon name="file-icons:nextjs"/>
+    <Icon name="mdi:nuxt"/>
+  </section>
+
+  <style lang="scss">
+    .skills {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      margin: 2rem 0;
+    }
+[astro-icon] {
+      height: 2rem;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  </style>
