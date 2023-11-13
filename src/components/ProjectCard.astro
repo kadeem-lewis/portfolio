@@ -1,15 +1,8 @@
 ---
 import { Icon } from "astro-icon";
-import { Image } from "astro:assets";
-const { title, description, tech, image, links } = Astro.props;
+const { title, description, tech, links } = Astro.props;
 ---
 
-<div class="card">
-  <Image
-    alt={image.alt}
-    src={import(`../assets/${image.path}.png`)}
-    width={400}
-  />
   <div>
     <div class="heading">
       <h3><a href={links[1] != "" ? links[1] : links[0]}>{title}</a></h3>
@@ -43,11 +36,17 @@ const { title, description, tech, image, links } = Astro.props;
       border: 1px solid black;
     }
   }
+  a {
+    &:hover{
+        color: green;
+      }
+  }
   .icons {
     display: flex;
     gap: 0.25rem;
     [astro-icon] {
       height: 1.5rem;
+
     }
   }
 </style>
