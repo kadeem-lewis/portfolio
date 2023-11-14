@@ -1,3 +1,7 @@
+---
+import ThemeToggle from "./ThemeToggle.astro";
+---
+
 <header>
   <nav>
     <div id="title">K</div>
@@ -5,7 +9,8 @@
       <li><a href="#about-me">About</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
-      <li><a href="/public/KadeemLewisResume.pdf" target="_blank" class="resume-button">Resume</a></li>
+      <li><a href="/KadeemLewisResume.pdf" target="_blank" class="resume-button">Resume</a></li>
+      <li><ThemeToggle/></li>
     </ul>
   </nav>
 </header>
@@ -13,9 +18,9 @@
   header {
     position: sticky;
     top: 0;
-    background-color: hsl(0, 0%, 100%);
+    background-color: hsl(var(--secondary));
     z-index: 100;
-    border-bottom: 1px solid hsl(0, 0%, 80%);
+    border-bottom: 1px solid hsl(var(--border));
   }
   nav {
     padding: 0 2rem;
@@ -29,6 +34,7 @@
   }
   ul {
     display: flex;
+    align-items: center;
     gap: 1rem;
   }
   li {
