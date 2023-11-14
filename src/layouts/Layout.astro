@@ -2,6 +2,7 @@
 import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.astro";
 import '@fontsource-variable/inter';
+import "../styles/globals.css";
 
 export interface Props {
   title: string;
@@ -25,7 +26,7 @@ const { title } = Astro.props;
     <Footer />
   </body>
 </html>
-<style is:global>
+<style is:global lang="scss">
   html {
     box-sizing: border-box;
     font-size: 100%;
@@ -39,7 +40,8 @@ const { title } = Astro.props;
   }
   body {
     font-family: 'Inter Variable', sans-serif;
-    background-color: hsl(0, 0%, 93%);
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
     margin: 0;
     padding: 0;
   }
@@ -80,13 +82,17 @@ const { title } = Astro.props;
     text-decoration: none;
   }
 
-  a:visited {
-    color: inherit;
-  }
+  a {
+    color: hsl(var(--link));
+      &:hover {
+        color: hsl(var(--primary));
+      }
+    }
+
 
 hr {
   margin: 4rem 0;
-  color: hsl(0, 0%, 80%);
+  color: hsl(var(--accent));
 }
 footer, main {
   max-width: 920px;
