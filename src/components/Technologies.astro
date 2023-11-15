@@ -21,6 +21,13 @@ import { Icon } from "astro-icon";
       align-items: center;
       margin: 2rem 0;
     }
+    @media (max-width: 768px) {
+      .skills {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(5, 1fr);
+      }
+    }
 [astro-icon] {
       height: 2rem;
       &:hover {
