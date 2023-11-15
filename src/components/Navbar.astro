@@ -7,9 +7,12 @@ import ThemeToggle from "./ThemeToggle.astro";
   <nav>
     <div id="title">K</div>
     <ul>
-      <li><a href="/posts"><span class="label">Blog</span><Icon name="mdi:post-outline"/></a></li>
-      <li><a href="/projects"><span class="label">Projects</span><Icon name="mdi:lightbulb-outline"/></a></li>
-      <!-- <li><a href="/KadeemLewisResume.pdf" target="_blank" class="resume-button">Resume</a></li> -->
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <!-- <li><a href="/posts"><span class="label">Blog</span><Icon name="mdi:post-outline"/></a></li>
+      <li><a href="/projects"><span class="label">Projects</span><Icon name="mdi:lightbulb-outline"/></a></li> -->
+      <li><a href="/KadeemLewisResume.pdf" target="_blank" class="resume-button">Resume</a></li>
       <li><ThemeToggle/></li>
     </ul>
   </nav>
@@ -55,6 +58,9 @@ import ThemeToggle from "./ThemeToggle.astro";
         height: 1.5rem;
       }
     .label {
+      display: none;
+    }
+    .resume-button {
       display: none;
     }
   }
