@@ -35,15 +35,22 @@
     document.getElementById("themeToggle").addEventListener("click", handleToggleClick);
   </script>
 
-  <style>
+  <style lang="scss">
     #themeToggle {
       border: 0;
       background: none;
+      cursor: pointer;
     }
-    .sun { stroke: black; }
+    .sun { stroke: black; &:hover {stroke: hsl(var(--primary))} }
     .moon { stroke: transparent; }
+
+    #themeToggle:hover .sun { stroke: hsl(var(--primary)); }
+    #themeToggle:hover .moon { stroke: transparent; }
   
   
     :global(.dark) .sun { stroke: transparent; }
     :global(.dark) .moon { stroke: white; }
+
+    :global(.dark) #themeToggle:hover .sun { stroke: transparent; }
+    :global(.dark) #themeToggle:hover .moon { stroke: hsl(var(--primary)); }
   </style>
