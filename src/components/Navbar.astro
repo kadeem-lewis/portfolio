@@ -1,4 +1,5 @@
 ---
+import Icon from "astro-icon";
 import ThemeToggle from "./ThemeToggle.astro";
 ---
 
@@ -6,10 +7,9 @@ import ThemeToggle from "./ThemeToggle.astro";
   <nav>
     <div id="title">K</div>
     <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="/KadeemLewisResume.pdf" target="_blank" class="resume-button">Resume</a></li>
+      <li><a href="/posts"><span class="label">Blog</span><Icon name="mdi:post-outline"/></a></li>
+      <li><a href="/projects"><span class="label">Projects</span><Icon name="mdi:lightbulb-outline"/></a></li>
+      <!-- <li><a href="/KadeemLewisResume.pdf" target="_blank" class="resume-button">Resume</a></li> -->
       <li><ThemeToggle/></li>
     </ul>
   </nav>
@@ -45,5 +45,17 @@ import ThemeToggle from "./ThemeToggle.astro";
     padding: 0.25rem 0.5rem;
     border-radius: 0.5rem;
     border: 1px solid hsl(var(--border));
+  }
+  [astro-icon] {
+        display: none;
+      }
+  @media (max-width: 768px) {
+    [astro-icon] {
+      display: block;
+        height: 1.5rem;
+      }
+    .label {
+      display: none;
+    }
   }
 </style>
