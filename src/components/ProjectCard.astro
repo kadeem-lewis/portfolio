@@ -7,8 +7,8 @@ const { title, description, tech, links } = Astro.props;
     <div class="heading">
       <h3><a href={links[1] != "" ? links[1] : links[0]} target="_blank">{title}</a></h3>
       <div class="icons">
-        <a href={links[0]} target="_blank"><Icon name="mdi:github" /></a>
-        <a href={links[1]} target="_blank"><Icon name="ic:baseline-open-in-new" /></a>
+        <a href={links[0]} target="_blank" aria-label="link to project github"><Icon name="mdi:github" /></a>
+        <a href={links[1]} target="_blank" aria-label="link to deployed project"><Icon name="ic:baseline-open-in-new" /></a>
       </div>
     </div>
     <p>{description}</p>
