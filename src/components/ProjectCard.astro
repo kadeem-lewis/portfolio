@@ -13,35 +13,28 @@ const { title, description, tech, links } = Astro.props;
     </div>
     <p>{description}</p>
     <div class="tech-stack">
-      {tech.map((skill: string) => <div>{skill}</div>)}
+      {tech.map((skill: string) => <div class={` ${skill!=="socket.io"? skill:"socketio"}`}>{skill}</div>)}
     </div>
   </div>
 </div>
 <style lang="scss">
-  .card {
-    padding: 1rem;
-    background-color: hsl(var(--secondary));
-    box-shadow: 0 0 0.5rem hsla(0, 0%, 0%, 0.25);
-    border-radius: 0.5rem;
-    margin: 1rem 0;
-  }
+
   div.heading {
     display: flex;
     justify-content: space-between;
   }
   .tech-stack {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap:0.5rem;
     div {
-      margin: 0.5rem 1rem;
-      padding: 0.5rem;
-      border-radius: 0.25rem;
-      border: 1px solid hsl(var(--border));
-    }
-  }
-  @media (max-width: 768px) {
-    .tech-stack {
-      grid-template-columns: 1fr 1fr;
+      color: hsl(var(--light-text));
+      text-transform: capitalize;
+      font-size: 0.875rem;
+      font-weight: 500;
+      padding:0.25rem 0.5rem;
+      border-radius: 2rem;
     }
   }
   .icons {
@@ -51,5 +44,28 @@ const { title, description, tech, links } = Astro.props;
       height: 1.5rem;
 
     }
+  }
+
+
+  .typescript {
+    background-color: hsl(var(--typescript));
+  }
+  .nodejs {
+    background-color: hsl(var(--nodejs));
+  }
+  .nuxtjs {
+    background-color: hsl(var(--nuxtjs));
+  }
+  .tailwind {
+    background-color: hsl(var(--tailwindcss));
+  }
+  .nextjs {
+    background-color: hsl(var(--nextjs));
+  }
+  .jotai {
+    background-color: black;
+  }
+  .socketio {
+    background-color: black;
   }
 </style>
