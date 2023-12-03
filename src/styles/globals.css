@@ -5,8 +5,14 @@
   --secondary: 259.6 5% 100%;
   --card: 259.6 5% 100%;
   --border: 0 0% 85%;
-  --accent: 0 0% 96%;
+  --accent: 0 0% 85%;
   --link: 0 0% 20%;
+  --typescript: 204.1, 100%, 40%;
+  --nodejs: 103, 49.6%, 42.5%;
+  --nuxtjs: 155.5, 100%, 33.1%;
+  --tailwindcss: 180.7, 100%, 35.7%;
+  --nextjs: 212.3, 100%, 47.6%;
+  --light-text: 0 0% 95%;
 }
 .dark {
   --background: 259.6 5% 13.3%;
@@ -14,7 +20,7 @@
   --primary: 259.6 59.8% 64.9%;
   --secondary: 259.6 5% 25%;
   --card: 259.6 5% 25%;
-  --border: 0 0% 50%;
+  --border: 0 0% 19%;
   --accent: 0 0% 19%;
   --link: 0 0% 85%;
 }
