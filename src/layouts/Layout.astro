@@ -1,7 +1,7 @@
 ---
 import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.astro";
-import '@fontsource-variable/inter';
+import "@fontsource-variable/inter";
 import "../styles/globals.css";
 
 export interface Props {
@@ -11,7 +11,7 @@ export interface Props {
 const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -39,7 +39,7 @@ const { title } = Astro.props;
     box-sizing: inherit;
   }
   body {
-    font-family: 'Inter Variable', sans-serif;
+    font-family: "Inter Variable", sans-serif;
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
     margin: 0;
@@ -51,11 +51,11 @@ const { title } = Astro.props;
     margin: 0;
   }
 
-  h2,h3 {
+  h2,
+  h3 {
     font-weight: 700;
-
   }
-  
+
   h1 {
     line-height: 1.1;
     font-size: 2.5rem;
@@ -84,22 +84,22 @@ const { title } = Astro.props;
 
   a {
     color: hsl(var(--link));
-      &:hover {
-        color: hsl(var(--primary));
-      }
+    &:hover {
+      color: hsl(var(--primary));
     }
+  }
 
+  hr {
+    margin: 4rem 0;
+    color: hsl(var(--accent));
+  }
+  footer,
+  main {
+    max-width: 920px;
+    margin: 0 auto;
+  }
 
-hr {
-  margin: 4rem 0;
-  color: hsl(var(--accent));
-}
-footer, main {
-  max-width: 920px;
-  margin: 0 auto;
-}
-
-.card {
+  .card {
     padding: 1rem;
     border: 1px solid hsl(var(--border));
     box-shadow: 1px 4px 10px -2px hsla(0, 0%, 0%, 0.25);
@@ -108,5 +108,4 @@ footer, main {
     flex-direction: column;
     margin: 1rem 0;
   }
-
 </style>

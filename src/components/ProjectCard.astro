@@ -3,22 +3,33 @@ import { Icon } from "astro-icon";
 const { title, description, tech, links } = Astro.props;
 ---
 
-  <div class="card">
-    <div class="heading">
-      <h3><a href={links[1] != "" ? links[1] : links[0]} target="_blank">{title}</a></h3>
-      <div class="icons">
-        <a href={links[0]} target="_blank" aria-label="link to project github"><Icon name="mdi:github" /></a>
-        <a href={links[1]} target="_blank" aria-label="link to deployed project"><Icon name="ic:baseline-open-in-new" /></a>
-      </div>
-    </div>
-    <p>{description}</p>
-    <div class="tech-stack">
-      {tech.map((skill: string) => <div class={` ${skill!=="socket.io"? skill:"socketio"}`}>{skill}</div>)}
+<div class="card">
+  <div class="heading">
+    <h3>
+      <a href={links[1] != "" ? links[1] : links[0]} target="_blank">{title}</a>
+    </h3>
+    <div class="icons">
+      <a href={links[0]} target="_blank" aria-label="link to project github"
+        ><Icon name="mdi:github" /></a
+      >
+      <a href={links[1]} target="_blank" aria-label="link to deployed project"
+        ><Icon name="ic:baseline-open-in-new" /></a
+      >
     </div>
   </div>
+  <p>{description}</p>
+  <div class="tech-stack">
+    {
+      tech.map((skill: string) => (
+        <div class={` ${skill !== "socket.io" ? skill : "socketio"}`}>
+          {skill}
+        </div>
+      ))
+    }
+  </div>
 </div>
-<style lang="scss">
 
+<style lang="scss">
   div.heading {
     display: flex;
     justify-content: space-between;
@@ -27,13 +38,13 @@ const { title, description, tech, links } = Astro.props;
     margin-top: auto;
     display: flex;
     flex-wrap: wrap;
-    gap:0.5rem;
+    gap: 0.5rem;
     div {
       color: hsl(var(--light-text));
       text-transform: capitalize;
       font-size: 0.875rem;
       font-weight: 500;
-      padding:0.25rem 0.5rem;
+      padding: 0.25rem 0.5rem;
       border-radius: 2rem;
     }
   }
@@ -42,10 +53,8 @@ const { title, description, tech, links } = Astro.props;
     gap: 0.25rem;
     [astro-icon] {
       height: 1.5rem;
-
     }
   }
-
 
   .typescript {
     background-color: hsl(var(--typescript));

@@ -11,8 +11,11 @@ import ThemeToggle from "./ThemeToggle.astro";
       <li><a href="#projects">Projects</a></li>
       <!-- <li><a href="/posts"><span class="label">Blog</span><Icon name="mdi:post-outline"/></a></li>
       <li><a href="/projects"><span class="label">Projects</span><Icon name="mdi:lightbulb-outline"/></a></li> -->
-      <li><a href="/KadeemLewisResume.pdf" target="_blank" class="resume-button">Resume</a></li>
-      <li><ThemeToggle/></li>
+      <li>
+        <a href="/KadeemLewisResume.pdf" target="_blank" class="resume-button"
+          >Resume</a>
+      </li>
+      <li><ThemeToggle /></li>
     </ul>
   </nav>
 </header>
@@ -54,13 +57,13 @@ import ThemeToggle from "./ThemeToggle.astro";
     border: 1px solid hsl(var(--border));
   }
   [astro-icon] {
-        display: none;
-      }
+    display: none;
+  }
   @media (max-width: 768px) {
     [astro-icon] {
       display: block;
-        height: 1.5rem;
-      }
+      height: 1.5rem;
+    }
     .label {
       display: none;
     }
