@@ -6,7 +6,7 @@ const projects = [
     title: "Pokedexle",
     description:
       "A wordle inspired web app where users can select a variety of different pokemon based game. Users can choose to either guess a pokemon based on it’s stats, guess a move based on it’s stats or guess a pokemon based on it’s outline.",
-    tech: ["Typescript", "NextJs", "Tailwind", "Jotai"],
+    tech: ["typescript", "nextjs", "tailwind", "jotai"],
     image: {
       path: "pokedexle",
       alt: "screenshot of pokedexle game",
@@ -20,7 +20,7 @@ const projects = [
     title: "Hangmen",
     description:
       "A multiplayer web based game where rooms of up to 4 players compete to see who can get the most correct guesses before game ends. The classic hangman game but with a twist. ",
-    tech: ["Typescript", "NuxtJs", "NodeJs", "Socket.io"],
+    tech: ["typescript", "nuxtjs", "nodejs", "socket.io"],
     image: {
       path: "hangmen",
       alt: "screenshot of hangmen game",
@@ -33,7 +33,7 @@ const projects = [
 ];
 ---
 
-<div>
+<div class="project-list">
   {
     projects.map((project) => (
       <ProjectCard
@@ -46,3 +46,11 @@ const projects = [
     ))
   }
 </div>
+
+
+<style>
+  .project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+  }
