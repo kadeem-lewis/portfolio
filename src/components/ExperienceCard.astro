@@ -1,0 +1,23 @@
+---
+const { title, company, timespan, description } = Astro.props;
+---
+
+<div class="card">
+  <h3 class="title">{title}</h3>
+  <div class="company">{company}</div>
+  <div class="timespan">{timespan}</div>
+  <p class="description">
+    {description}
+  </p>
+</div>
+
+<style lang="scss">
+  .description,
+  .timespan {
+    margin-top: 0.5rem;
+  }
+  .company {
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+</style>
