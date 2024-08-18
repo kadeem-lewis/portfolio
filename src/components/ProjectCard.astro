@@ -1,5 +1,5 @@
 ---
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 const { title, description, tech, links } = Astro.props;
 ---
 
@@ -13,7 +13,7 @@ const { title, description, tech, links } = Astro.props;
         ><Icon name="mdi:github" /></a
       >
       <a href={links[1]} target="_blank" aria-label="link to deployed project"
-        ><Icon name="ic:baseline-open-in-new" /></a
+        ><Icon name="mdi:open-in-new" /></a
       >
     </div>
   </div>
@@ -51,8 +51,8 @@ const { title, description, tech, links } = Astro.props;
   .icons {
     display: flex;
     gap: 0.25rem;
-    [astro-icon] {
-      height: 1.5rem;
+    [data-icon] {
+      font-size: 1.5rem;
     }
   }
 

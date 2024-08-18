@@ -13,7 +13,8 @@ import ThemeToggle from "./ThemeToggle.astro";
       <li><a href="/projects"><span class="label">Projects</span><Icon name="mdi:lightbulb-outline"/></a></li> -->
       <li>
         <a href="/KadeemLewisResume.pdf" target="_blank" class="resume-button"
-          >Resume</a>
+          >Resume</a
+        >
       </li>
       <li><ThemeToggle /></li>
     </ul>
@@ -56,13 +57,13 @@ import ThemeToggle from "./ThemeToggle.astro";
     border-radius: 0.5rem;
     border: 1px solid hsl(var(--border));
   }
-  [astro-icon] {
+  [data-icon] {
     display: none;
   }
   @media (max-width: 768px) {
-    [astro-icon] {
+    [data-icon] {
       display: block;
-      height: 1.5rem;
+      font-size: 1.5rem;
     }
     .label {
       display: none;

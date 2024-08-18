@@ -1,17 +1,17 @@
 ---
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 ---
 
 <section class="skills">
   <Icon name="mdi:language-html5" />
-  <Icon name="ion:logo-css3" />
+  <Icon name="devicon-plain:css3" />
   <Icon name="mdi:tailwind" />
   <Icon name="mdi:language-typescript" />
   <Icon name="mdi:nodejs" />
   <Icon name="mdi:react" />
-  <Icon name="file-icons:nextjs" />
+  <Icon name="devicon-plain:nextjs" />
   <Icon name="mdi:nuxt" />
-  <Icon name="simple-icons:astro" />
+  <Icon name="devicon-plain:astro" />
 </section>
 
 <style lang="scss">
@@ -29,8 +29,8 @@ import { Icon } from "astro-icon";
       grid-template-columns: repeat(5, 1fr);
     }
   }
-  [astro-icon] {
-    height: 2rem;
+  [data-icon] {
+    font-size: 2rem;
     &:hover {
       transform: scale(1.2);
     }
