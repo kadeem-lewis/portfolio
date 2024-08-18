@@ -3,7 +3,7 @@ import Projects from "../components/Projects.astro";
 import Technologies from "../components/Technologies.astro";
 import Timeline from "../components/Timeline.astro";
 import Layout from "../layouts/Layout.astro";
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 ---
 
 <Layout title="Kadeem Lewis">
@@ -11,17 +11,17 @@ import { Icon } from "astro-icon";
     <section class="opening">
       <section id="intro">
         <h1>
-          Hi! 👋🏿 My name is <span>Kadeem Lewis</span> and I turn ideas into
-          code.
+          Hi! 👋🏿 My name is <span>Kadeem Lewis</span> and I turn ideas into code.
         </h1>
       </section>
+
       <section class="socials">
         <a
           href="https://www.linkedin.com/in/kadeemlewis/"
           target="_blank"
           aria-label="linkedin link"
         >
-          <Icon name="mdi:linkedin/" />
+          <Icon name="mdi:linkedin" />
         </a>
         <a
           href="https://github.com/kadeem-lewis"
@@ -46,6 +46,12 @@ import { Icon } from "astro-icon";
         </a>
       </section>
     </section>
+    <div class="resume-button-container">
+      <button class="resume-button">
+        <a href="/KadeemLewisResume.pdf" target="_blank">View my Resume</a>
+      </button>
+    </div>
+    <hr />
     <section id="about">
       <h2>About Me</h2>
       <p>
@@ -106,8 +112,29 @@ import { Icon } from "astro-icon";
     display: flex;
     justify-self: end;
     gap: 2rem;
-    [astro-icon] {
-      height: 2rem;
+    [data-icon] {
+      font-size: 2rem;
+    }
+  }
+  .resume-button-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .resume-button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: 2px solid hsl(var(--border));
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin: auto;
+    background-color: hsl(var(--background));
+    &:hover {
+      scale: 1.05;
+      transition: all 0.3s ease-in-out;
+    }
+    a {
+      text-decoration: none;
     }
   }
   @media (max-width: 768px) {
@@ -116,7 +143,7 @@ import { Icon } from "astro-icon";
     }
   }
 
-  [astro-icon] {
-    height: 1.5rem;
+  [data-icon] {
+    font-size: 1.5rem;
   }
 </style>
